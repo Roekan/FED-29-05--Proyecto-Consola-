@@ -2,6 +2,7 @@ root {
   font-size: 16px;
 }
 
+
 body,
 html {
   display: flex;
@@ -31,13 +32,35 @@ html {
   margin-right: 0.5%;
   width: 10.6rem;
   height: 31rem;
-  border: 8px outset #51c4e4;
-  border-left: 8px solid #337c90;
-  background-color: #51c4e4;
+  background: rgb(101, 216, 248);
+  background: linear-gradient(
+    180deg,
+    rgba(101, 216, 248, 1) 0%,
+    rgba(158,234,255,1) 1%,
+    rgba(81, 196, 228, 1) 3%,
+    rgba(41, 156, 188, 1) 96.5%,
+    rgba(101, 216, 248, 1) 99%
+  );
   border-radius: 7rem 0rem 0rem 7rem;
   position: relative;
   z-index: 9999;
-
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.joy-con-left-int {
+  box-sizing: border-box;
+  width: 92%;
+  height: 94%;
+  background: rgb(101, 216, 248);
+  background: linear-gradient(
+    180deg,
+    rgba(81, 196, 228, 1) 3%,
+    rgba(31, 146, 178, 1) 96.5%
+  );
+  border-radius: 7rem 0rem 0rem 7rem;
+  position: relative;
+  z-index: 9998;
 }
 
 .box-l1 {
@@ -50,14 +73,14 @@ html {
   border-radius: 100px 10px 10px 10px;
 }
 .box-r1 {
-    top: -5px;
-    right: 6px;
-    position: absolute;
-    width: 130px;
-    height: 400px;
-    background-color: #111;
-    border-radius: 10px 100px 10px 10px;
-  }
+  top: -5px;
+  right: 6px;
+  position: absolute;
+  width: 130px;
+  height: 400px;
+  background-color: #111;
+  border-radius: 10px 100px 10px 10px;
+}
 
 .box-minus {
   box-sizing: border-box;
@@ -67,14 +90,13 @@ html {
   align-items: center;
   justify-content: end;
   padding-right: 1rem;
-  
 }
 
 .minus {
   background-color: #111;
   width: 2rem;
   height: 0.8rem;
-  box-shadow:0.1rem 0.2rem 0.1rem 0.1rem rgba(0,0,0,.4);
+  box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
 }
 
 .box-joy-stick {
@@ -89,34 +111,43 @@ html {
 }
 
 .joy-stick {
-    background: linear-gradient(to top right,#111,#60686b);
-    border-radius:50%;
-    border:2px solid rgba(0,0,0,.4);
-    box-sizing:border-box;
-    box-shadow:0px 3px 0px rgba(0,0,0,.3);
-    width: 4rem;
-    height: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  background: linear-gradient(to top right, #111, #60686b);
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.3);
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.joy-stick-center{
-    width:3rem;
-    height:3rem;
-    border:2px solid rgba(0,0,0,.4);;
-    background: linear-gradient(to top right,#111,#60686b);
-    border-radius:50%;
-    }
+.joy-stick-center {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  background: linear-gradient(to top right, #111, #60686b);
+  border-radius: 50%;
+}
 
 .box-buttons {
   box-sizing: border-box;
   display: block;
-
   width: 100%;
   padding: 1.4rem;
 }
+
+.button{
+    font-family: sans-serif;
+    font-weight: 1.4rem;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 .buttons-top {
   display: flex;
@@ -132,47 +163,89 @@ html {
   display: flex;
   width: 100%;
   justify-content: center;
-  
 }
 
 .button-top {
   box-sizing: border-box;
-  background: linear-gradient(to top right,#111,#666);
+  background: linear-gradient(to top right, #111, #666);
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   padding: 1rem;
-  box-shadow:0.1rem 0.2rem 0.1rem 0.1rem rgba(0,0,0,.4);
+  box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
+}
+/*----*/
+.joy-con-right .button-top:after{
+    content:"X";
+    align-self: center;
 }
 
+.joy-con-left .button-top:after{
+    content:"";
+    align-self: center;
+}
+
+
+.joy-con-right .button-left:after{
+    content:"Y";
+    align-self: center;
+}
+
+.joy-con-left .button-left:after{
+    content:"";
+    align-self: center;
+}
+
+
+.joy-con-right .button-right:after{
+    content:"B";
+    align-self: center;
+}
+
+.joy-con-left .button-right:after{
+    content:"";
+    align-self: center;
+}
+
+
+.joy-con-right .button-bottom:after{
+    content:"A";
+    align-self: center;
+}
+
+.joy-con-left .button-bottom:after{
+    content:"";
+    align-self: center;
+}
+/*---*/
 .button-left {
   box-sizing: border-box;
-  background: linear-gradient(to top right,#111,#666);
+  background: linear-gradient(to top right, #111, #666);
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   padding: 1rem;
-  box-shadow:0.1rem 0.2rem 0.1rem 0.1rem rgba(0,0,0,.4);
+  box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
 }
 
 .button-right {
   box-sizing: border-box;
-  background: linear-gradient(to top right,#111,#666);
+  background: linear-gradient(to top right, #111, #666);
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   padding: 1rem;
-  box-shadow:0.1rem 0.2rem 0.1rem 0.1rem rgba(0,0,0,.4);
+  box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
 }
 
 .button-bottom {
   box-sizing: border-box;
-  background: linear-gradient(to top right,#111,#666);
+  background: linear-gradient(to top right, #111, #666);
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   padding: 1rem;
-  box-shadow:0.1rem 0.2rem 0.1rem 0.1rem rgba(0,0,0,.4);
+  box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
 }
 
 .box-square-button {
@@ -183,7 +256,6 @@ html {
   align-items: center;
   justify-content: end;
   padding-right: 1.8rem;
-  
 }
 
 .square-button {
@@ -193,7 +265,7 @@ html {
   height: 0.8rem;
   border-radius: 0.1rem;
   padding: 1rem;
-  box-shadow:0.05rem 0.1rem 0.1rem 0.1rem rgba(0,0,0,.4);
+  box-shadow: 0.05rem 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
 }
 
 /* end JOY-CON IZQUIERDO*/
@@ -222,14 +294,14 @@ html {
   width: 1.2rem;
   background-color: #808080;
   align-self: baseline;
-  border-radius:0px 0px 0.5rem 0px;
+  border-radius: 0px 0px 0.5rem 0px;
 }
 .hole-right {
   height: 1.4rem;
   width: 1.2rem;
   background-color: #808080;
   align-self: baseline;
-  border-radius:0px 0px 0px 0.5rem;
+  border-radius: 0px 0px 0px 0.5rem;
 }
 
 .screen {
@@ -258,11 +330,35 @@ html {
   margin-left: 0.5%;
   width: 10.6rem;
   height: 31rem;
-  background-color: #eb6052;
-  border: 8px outset #eb6052;
-  border-left: 8px solid #973d34;
+  background: rgb(235, 96, 82);
+  background: linear-gradient(
+    180deg,
+    rgba(235, 96, 82, 1) 0%,
+    rgba(255,116,102,1) 1%,
+    rgba(215, 76, 62, 1) 3%,
+    rgba(151, 61, 52, 1) 96.5%,
+    rgba(235, 96, 82, 1) 99%
+  );
   border-radius: 0rem 7rem 7rem 0rem;
   z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.joy-con-right-int {
+  box-sizing: border-box;
+  width: 92%;
+  height: 94%;
+  background: rgb(235, 96, 82) ;
+  background: linear-gradient(
+    180deg,
+    rgba(215, 76, 62, 1) 3%,
+    rgba(141, 51, 42, 1) 96.5%
+  );
+  border-radius: 0rem 7rem 7rem 0rem;
+  position: relative;
+  z-index: 9998;
 }
 
 .box-plus {
@@ -287,7 +383,7 @@ html {
   background-color: #111;
   width: 2rem;
   height: 0.8rem;
-  box-shadow:0.1rem 0.2rem 0.1rem 0.1rem rgba(0,0,0,.4);
+  box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
 }
 
 .plus-vertical {
@@ -295,7 +391,7 @@ html {
   background-color: #111;
   width: 0.8rem;
   height: 2rem;
-  box-shadow:0.1rem 0.2rem 0.1rem 0.1rem rgba(0,0,0,.4);
+  box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
 }
 
 .box-home-button {
@@ -313,10 +409,10 @@ html {
   background-color: #111;
   width: 2.6rem;
   height: 2.6rem;
-  
+
   border-radius: 50%;
   padding: 1rem;
-  box-shadow:0.05rem 0.1rem 0.1rem 0.1rem rgba(0,0,0,.4);
+  box-shadow: 0.05rem 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
 }
 
 /*END JOY-CON DERECHO*/
