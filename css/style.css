@@ -79,7 +79,17 @@ html {
     rgba(65, 72, 76, 1) 99%
   );
   border-radius: 5.8em 1rem  1rem  1rem ;
+  box-shadow:  2px 3px 2px 1px rgba(0, 0, 0, 0.3);
 }
+
+.box-l1:active {
+  top: -2px;
+  box-shadow:  1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
 .box-r1 {
   top: -5px;
   right: 6px;
@@ -96,24 +106,34 @@ html {
     rgba(65, 72, 76, 1) 99%
   );
   border-radius: 1rem 5.8em 1rem  1rem ;
-  ;
+  box-shadow:  2px 3px 2px 1px rgba(0, 0, 0, 0.3);
 }
+.box-r1:active{
+  top: -2px;
+  box-shadow:  1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
 
 .box-minus {
   box-sizing: border-box;
   display: flex;
   width: 100%;
-  height: 25%;
+  height: auto;
+  margin-top:1.6rem;
+  margin-bottom:3rem;
   align-items: center;
   justify-content: end;
   padding-right: 1rem;
 }
 
 .minus {
-  background-color: #111;
+  background-color: #333;
   width: 2rem;
   height: 0.8rem;
   box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
+}
+.minus:active {
+  box-shadow: inset 0.01rem 0.02rem 0.1rem 0.1rem rgba(0, 0, 0, 1);
 }
 
 .box-joy-stick {
@@ -127,17 +147,26 @@ html {
   padding: 1rem;
 }
 
+
+.joy-con-left .box-joy-stick{
+  padding-top: 0.2rem;
+}
+
 .joy-stick {
   background: linear-gradient(to top right, #111, #60686b);
   border-radius: 50%;
   border: 2px solid rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
-  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 2px 5px rgba(0, 0, 0, 0.3);
   width: 4rem;
   height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.joy-stick:active{
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .joy-stick-center {
@@ -153,6 +182,7 @@ html {
   width: 100%;
   padding: 1.4rem;
 }
+
 
 .table-buttons{
   display: grid; 
@@ -186,7 +216,13 @@ html {
     box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
 }
 
-.space{
+
+.button:active {
+  box-shadow: inset 0.01rem 0.02rem 0.1rem 0.1rem rgba(0, 0, 0, 1);
+}
+
+
+.space, .space:active {
   box-shadow: none;
 }
 
@@ -217,7 +253,7 @@ html {
   
 }
 
-.joy-con-left>.button{
+.joy-con-left .button{
   color:#151f19;
 }
 
@@ -230,6 +266,7 @@ html {
 .joy-con-left .button-top:after{
     content:"▲";
     align-self: center;
+    color: r;
 }
 
 
@@ -296,27 +333,41 @@ html {
   box-sizing: border-box;
   display: flex;
   width: 100%;
-  height: 25%;
+  height: 14%;
   align-items: center;
   justify-content: end;
   padding-right: 1.8rem;
 }
 
+
 .square-button {
   box-sizing: border-box;
-  background-color: #111;
+  background: linear-gradient(to bottom right, #2a2a2a, #3a3a3a);
   width: 2rem;
-  height: 0.8rem;
+  height: 2rem;
   border-radius: 0.1rem;
-  padding: 1rem;
   box-shadow: 0.05rem 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square-button:active{
+  box-shadow: inset 0.05rem 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
+}
+
+.circle-square-button{
+  width: 70%;
+  height: 70%;
+  background: #111;
+  border-radius: 50%;
 }
 
 /* end JOY-CON IZQUIERDO*/
 
 /*PANTALLA*/
 .button-on{
-  top: -3px;
+  top: -4px;
   left: 16em;
   position: absolute;
   width: 4.4em;
@@ -331,6 +382,12 @@ html {
     rgba(65, 72, 76, 1) 99%
   );
   border-radius: 1em 1em;
+
+box-shadow:  2px 3px 2px 1px rgba(0, 0, 0, 0.3);
+}
+.button-on:active{
+  top: -2px;
+  box-shadow:  1px 1px 2px 1px rgba(0, 0, 0, 0.3);
 }
 
 .screen-container {
@@ -429,7 +486,9 @@ html {
   box-sizing: border-box;
   display: flex;
   width: 100%;
-  height: 25%;
+  height: auto;
+  margin-top:1.6rem;
+  margin-bottom:1.4rem;
   align-items: center;
   justify-content: start;
   padding-left: 1rem;
@@ -443,8 +502,10 @@ html {
   align-items: center;
 }
 
+
+
 .plus-horizontal {
-  background-color: #111;
+  background-color: #333;
   width: 2rem;
   height: 0.8rem;
   box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
@@ -452,31 +513,62 @@ html {
 
 .plus-vertical {
   position: absolute;
-  background-color: #111;
+  background-color: #333;
   width: 0.8rem;
   height: 2rem;
   box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
 }
 
+.plus-horizontal:active {
+  box-shadow: inset 0.01rem 0.02rem 0.1rem 0.1rem rgba(0, 0, 0, 1);
+}
+
+.plus-vertical:active {
+  box-shadow: inset 0.01rem 0.02rem 0.1rem 0.1rem rgba(0, 0, 0, 1);
+}
+
+
+
 .box-home-button {
   box-sizing: border-box;
   display: flex;
   width: 100%;
-  height: 25%;
+  height: 14%;
   align-items: center;
   justify-content: start;
   padding-left: 1.8rem;
 }
 
-.home-button {
-  box-sizing: border-box;
-  background-color: #111;
+.circle-button{
+  background: linear-gradient(to top right, #444, #999);
+  border-radius: 50%;
   width: 2.6rem;
   height: 2.6rem;
-
-  border-radius: 50%;
-  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0.05rem 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
 }
+
+.home-button {
+  box-sizing: border-box;
+  background: linear-gradient(to top right, #222, #333);
+  width: 84%;
+  height: 84%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle-button:active{
+  box-shadow: inset 0.05rem 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
+}
+
+.home-button>svg{
+  height: 1.6rem;
+  fill:#111;
+}
+
+
 
 /*END JOY-CON DERECHO*/
