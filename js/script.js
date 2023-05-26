@@ -12,11 +12,11 @@ document.getElementById("plus-horizontal").addEventListener("mouseout", outPlus)
 
 
 
-/*Prueba  de fondo */
+/*Fondo de pantalla */
 
 function mostrarOcultarImagen(){
     if(!fondo){
-        document.getElementById("glass").style="background: url(../images/fondo.jpg)";
+        document.getElementById("glass").style="background: url(https://roekan.github.io/FED-29-05--Proyecto-Consola-/images/fondo.jpg)";
         fondo= !fondo;
         
     }else{
