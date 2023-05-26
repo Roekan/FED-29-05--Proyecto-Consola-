@@ -12,11 +12,11 @@ document.getElementById("plus-horizontal").addEventListener("mouseout", outPlus)
 
 
 
-/*Prueba de imagen de fondo */
+/*Prueba  de fondo */
 
 function mostrarOcultarImagen(){
     if(!fondo){
-        document.getElementById("glass").style="background: url(./images/fondo.jpg)";
+        document.getElementById("glass").style="background: url(../images/fondo.jpg)";
         fondo= !fondo;
         
     }else{
