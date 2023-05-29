@@ -23,11 +23,11 @@ Crear una consola en HTML y CSS
 
 ## Imagenes
 Previsualización
-<img src="./images/Imagen-nintendo-switch.png">
+<img src="./images/Imagen-nintendo-switch.png"><br/>
 Fondo de pantalla
-<img src="./images/fondo.jpg">
+<img src="./images/fondo.jpg"><br/>
 Imagenes de ejemplo para crearlo
-<img src="./images/imagenes-ejemplo/switch.jpg">
+<img src="./images/imagenes-ejemplo/switch.jpg"><br/>
 <img src="./images/imagenes-ejemplo/switch-psd.jpg">
 
 
